@@ -71,4 +71,6 @@ app.server = app.listen(port, host, () => {
   console.log(`server running @ http://${host ? host : 'localhost'}:${port}`)
 })
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 module.exports = app;
